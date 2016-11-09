@@ -1,0 +1,19 @@
+<div class="form">
+	<%= form_for @item do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+		<br />
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+		<br />
+		<%= f.label :urgency %>
+		<%= f.check_box :urgency %>
+		<br />
+		<%= f.label :complete %>
+		<%= f.check_box :complete %>
+		<br />
+		<%= f.submit %>
+		<%= f.hidden_field :list_id, value: @list_id %>
+	<% end %>
+
+</div>

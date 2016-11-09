@@ -1,0 +1,12 @@
+<h1><%= @item.title %></h1>
+<br />
+
+<blockquote>
+	<%= @item.body %>
+</blockquote>
+
+<h4>Is Urgent: <%= @item.urgency ? 'Yes' : 'No' %> </h4>
+
+<h4>Is Completed: <%= @item.complete ? 'Yes' : 'No' %> </h4>
+
+<%= link_to 'Back', items_path %>

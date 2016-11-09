@@ -1,0 +1,14 @@
+<h1>Add some things to do</h1>
+<hr />
+
+<ul>
+	<%@items.each do |item| %>
+	<li>
+			<%= item.title %>
+			<%= link_to 'Show', item_path(item) %>
+			<%= link_to 'Edit', edit_item_path(item) %>
+			<%= link_to 'Delete', item_path(item), method: :delete, data: {confirm: 'You sure you want to delete that dude?'} %>
+		</li>
+	<% end %>
+</ul>
+<%= link_to 'New Item', new_item_path(@item, list_id: @list_id) %>

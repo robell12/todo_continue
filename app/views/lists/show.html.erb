@@ -1,0 +1,4 @@
+<h1>Make some Todo items for <%= @list.title %></h1>
+<hr />
+<h2>Go back to lists <%= link_to 'Lists',root_path %> </h2>
+<h2>Make a list of items for <%= @list.title %> <%= link_to 'Items', items_path(list_id: @list.id) %> </h2>
